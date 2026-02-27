@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity - EZ-Banko</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="activity.css">
+    <style>
+        .activity-item {
+            animation: none;
+            /* Disable slide up animation for static list */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <div class="app-container">
+            <!-- Header -->
+            <header class="header subpage-header">
+                <a href="index.html" class="icon-btn back-btn" aria-label="Go Back">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="var(--color-black)" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <div class="header-text">
+                    <h1>All Activity</h1>
+                </div>
+                <button class="icon-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                            stroke="var(--color-black)" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Filters -->
+            <div class="card-filters activity-filters">
+                <button class="pill active">All</button>
+                <button class="pill">Income</button>
+                <button class="pill">Expenses</button>
+            </div>
+
+            <!-- Activity List -->
+            <section class="activity-full-list">
+
+                <h3 class="date-header">Today</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-left">
+                            <div class="activity-icon bg-yellow">
+                                <span>☕</span>
+                            </div>
+                            <div class="activity-info">
+                                <span class="activity-title">Starbucks</span>
+                                <span class="activity-date">10:45 AM</span>
+                            </div>
+                        </div>
+                        <div class="activity-amount negative">-$6.50</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-left">
+                            <div class="activity-icon bg-green">
+                                <span>🛒</span>
+                            </div>
+                            <div class="activity-info">
+                                <span class="activity-title">Amazon Purchase</span>
+                                <span class="activity-date">09:12 AM</span>
+                            </div>
+                        </div>
+                        <div class="activity-amount negative">-$89.99</div>
+                    </div>
+                </div>
+
+                <h3 class="date-header mt-24">Yesterday</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-left">
+                            <div class="activity-icon bg-orange">
+                                <span>₿</span>
+                            </div>
+                            <div class="activity-info">
+                                <span class="activity-title">BTC Purchase</span>
+                                <span class="activity-date">02:30 PM</span>
+                            </div>
+                        </div>
+                        <div class="activity-amount negative">-$500.00</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-left">
+                            <div class="activity-icon bg-blue">
+                                <span>🎬</span>
+                            </div>
+                            <div class="activity-info">
+                                <span class="activity-title">Netflix Subscription</span>
+                                <span class="activity-date">11:00 AM</span>
+                            </div>
+                        </div>
+                        <div class="activity-amount negative">-$15.99</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-left">
+                            <div class="activity-icon bg-purple">
+                                <span>🚗</span>
+                            </div>
+                            <div class="activity-info">
+                                <span class="activity-title">Uber Ride</span>
+                                <span class="activity-date">08:15 AM</span>
+                            </div>
+                        </div>
+                        <div class="activity-amount negative">-$24.50</div>
+                    </div>
+                </div>
+
+                <h3 class="date-header mt-24">October 15, 2025</h3>
+                <div class="activity-list pb-40">
+                    <div class="activity-item">
+                        <div class="activity-left">
+                            <div class="activity-icon bg-light-green">
+                                <span>💰</span>
+                            </div>
+                            <div class="activity-info">
+                                <span class="activity-title">Salary Deposit</span>
+                                <span class="activity-date">09:00 AM</span>
+                            </div>
+                        </div>
+                        <div class="activity-amount positive">+$3,200.00</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-left">
+                            <div class="activity-icon bg-teal">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M15 9L9 15M9 9L15 15" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="activity-info">
+                                <span class="activity-title">Maria Transfer</span>
+                                <span class="activity-date">10:20 AM</span>
+                            </div>
+                        </div>
+                        <div class="activity-amount negative">-$150.00</div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

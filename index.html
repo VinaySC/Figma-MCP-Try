@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZ-Banko</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <div class="app-container">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-text">
+                    <h1>EZ-Banko</h1>
+                    <p>Welcome back, Alex</p>
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn" aria-label="Notifications">
+                        <img src="http://localhost:3845/assets/6e815c07914428a4d29890601795ddb98366166e.svg" alt="">
+                    </button>
+                    <button class="icon-btn" aria-label="Settings">
+                        <img src="http://localhost:3845/assets/21bb64ab3d80b9bedf52206935b32fc87ad8091d.svg" alt="">
+                    </button>
+                </div>
+            </header>
+
+            <!-- Total Balance -->
+            <section class="total-balance">
+                <h2>Total Balance (USD)</h2>
+                <p class="balance-amount">$47,779.06</p>
+            </section>
+
+            <!-- Card Filters -->
+            <div class="card-filters">
+                <button class="pill active">Primary Card</button>
+                <button class="pill">Bitcoin Wallet</button>
+                <button class="pill">Ethereum Wallet</button>
+                <button class="pill">Savings Card</button>
+            </div>
+
+            <!-- Main Card -->
+            <section class="main-card">
+                <div class="card-bg-shape shape-top-right"></div>
+                <div class="card-bg-shape shape-bottom-left"></div>
+
+                <div class="card-content">
+                    <div class="card-top">
+                        <div class="card-balance-info">
+                            <span class="card-label">Balance</span>
+                            <span class="card-value">$12,453.87</span>
+                        </div>
+                        <div class="card-badge">
+                            <span class="badge-text">Main</span>
+                            <img src="http://localhost:3845/assets/089a64bd2c14570269df061a0d09b4788bdb7bd1.svg"
+                                class="card-icon" alt="">
+                        </div>
+                    </div>
+
+                    <div class="card-bottom">
+                        <div class="card-number-info">
+                            <span class="card-label">Card Number</span>
+                            <span class="card-number">•••• 4532</span>
+                        </div>
+                        <div class="card-logo">
+                            <div class="circle circle-left"></div>
+                            <div class="circle circle-right"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pagination Dots -->
+            <div class="pagination">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Actions -->
+            <section class="quick-actions">
+                <button class="action-btn" onclick="window.location.href='send.html'">
+                    <div class="action-icon">
+                        <img src="http://localhost:3845/assets/69aa6413683a62a4204303c9da2629d757b2b55b.svg" alt="">
+                    </div>
+                    <span>Send</span>
+                </button>
+                <button class="action-btn">
+                    <div class="action-icon">
+                        <img src="http://localhost:3845/assets/4516e6f1cea1619be96aac894502d4ee80798dff.svg" alt="">
+                    </div>
+                    <span>Receive</span>
+                </button>
+                <button class="action-btn">
+                    <div class="action-icon">
+                        <img src="http://localhost:3845/assets/d5320b3b225e5c8b5e45bb36b883d7d723846370.svg" alt="">
+                    </div>
+                    <span>Trade</span>
+                </button>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="recent-activity">
+                <div class="activity-header">
+                    <h3>Recent Activity</h3>
+                    <a href="activity.html" class="see-all">See all</a>
+                </div>
+
+                <div class="activity-list">
+                    <!-- Amazon -->
+                    <div class="activity-item">
+                        <div class="activity-left">
+                            <div class="activity-icon bg-green">
+                                <span>🛒</span>
+                            </div>
+                            <div class="activity-info">
+                                <span class="activity-title">Amazon Purchase</span>
+                                <span class="activity-date">Oct 19, 2025</span>
+                            </div>
+                        </div>
+                        <div class="activity-amount negative">-$89.99</div>
+                    </div>
+
+                    <!-- BTC -->
+                    <div class="activity-item">
+                        <div class="activity-left">
+                            <div class="activity-icon bg-orange">
+                                <span>₿</span>
+                            </div>
+                            <div class="activity-info">
+                                <span class="activity-title">BTC Purchase</span>
+                                <span class="activity-date">Oct 18, 2025</span>
+                            </div>
+                        </div>
+                        <div class="activity-amount negative">-$500.00</div>
+                    </div>
+
+                    <!-- Salary -->
+                    <div class="activity-item">
+                        <div class="activity-left">
+                            <div class="activity-icon bg-light-green">
+                                <span>💰</span>
+                            </div>
+                            <div class="activity-info">
+                                <span class="activity-title">Salary Deposit</span>
+                                <span class="activity-date">Oct 15, 2025</span>
+                            </div>
+                        </div>
+                        <div class="activity-amount positive">+$3,200.00</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+/* Send Page Specific Styles */
+
+.subpage-header {
+    margin-bottom: 24px;
+}
+
+.subpage-header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.back-btn {
+    background-color: var(--color-gray-100);
+}
+
+.recipient-section {
+    padding: 0 32px;
+    margin-bottom: 32px;
+}
+
+.recipient-section h2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-gray-500);
+    margin-bottom: 16px;
+}
+
+.recipient-list {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 8px;
+    /* For hover effects */
+}
+
+.recipient-list::-webkit-scrollbar {
+    display: none;
+}
+
+.recipient-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    min-width: 72px;
+}
+
+.avatar-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid transparent;
+    transition: all 0.2s;
+}
+
+.recipient-item.active .avatar-circle {
+    border-color: var(--color-green-500);
+    transform: scale(1.05);
+}
+
+.avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.add-circle {
+    border: 2px dashed var(--color-gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-gray-100);
+}
+
+.recipient-item:hover .avatar-circle {
+    transform: scale(1.05);
+}
+
+.recipient-name {
+    font-size: 14px;
+    color: var(--color-black);
+    font-weight: 500;
+}
+
+.add-new .recipient-name {
+    color: var(--color-gray-500);
+}
+
+/* Amount Section */
+.amount-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 32px;
+    margin-bottom: 32px;
+}
+
+.currency-badge {
+    background-color: var(--color-gray-100);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-gray-500);
+    margin-bottom: 24px;
+}
+
+.amount-display {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.currency-symbol {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--color-black);
+    margin-top: 8px;
+    margin-right: 4px;
+}
+
+.amount-input {
+    font-family: inherit;
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--color-black);
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 140px;
+    /* Adjust based on value size ideally via JS */
+    text-align: left;
+    padding: 0;
+}
+
+.balance-subtext {
+    font-size: 14px;
+    color: var(--color-gray-500);
+}
+
+/* Note Section */
+.note-section {
+    padding: 0 32px;
+    margin-bottom: 40px;
+}
+
+.note-input {
+    width: 100%;
+    padding: 16px 20px;
+    background-color: var(--color-gray-100);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    font-size: 16px;
+    font-family: inherit;
+    color: var(--color-black);
+    outline: none;
+    transition: all 0.2s;
+}
+
+.note-input::placeholder {
+    color: var(--color-gray-500);
+}
+
+.note-input:focus {
+    border-color: var(--color-green-500);
+    background-color: var(--color-white);
+}
+
+/* Keypad Layout */
+.keypad {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 32px;
+    margin-bottom: 120px;
+    /* Leave space for floating button */
+}
+
+.key-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.key {
+    flex: 1;
+    height: 64px;
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: inherit;
+    color: var(--color-black);
+    cursor: pointer;
+    border-radius: 16px;
+    transition: all 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.key:hover {
+    background-color: var(--color-gray-100);
+}
+
+.key:active {
+    background-color: #e8e8e8;
+    transform: scale(0.95);
+}
+
+/* Floating Action */
+.floating-action {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 428px;
+    padding: 24px 32px 32px;
+    background: linear-gradient(to top, var(--color-white) 70%, rgba(255, 255, 255, 0));
+    display: flex;
+    justify-content: center;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 18px 0;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: none;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.primary-btn:hover {
+    background-color: #333;
+}
+
+.primary-btn:active {
+    transform: scale(0.98);
+}
