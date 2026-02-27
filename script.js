@@ -38,12 +38,51 @@ document.addEventListener('DOMContentLoaded', () => {
             logoHTML: `
                 <img src="http://localhost:3845/assets/84230d9254c4803d8c194be3d66830e5e16db752.svg" class="btc-watermark" alt="">
             `
+        },
+        {
+            id: 'ethereum',
+            bg: 'linear-gradient(147.966deg, rgb(106, 114, 203) 0%, rgb(55, 62, 138) 100%)',
+            balanceHTML: `
+                <span class="card-label">ETH Balance</span>
+                <span class="card-value">12.304 ETH</span>
+                <span class="card-approx">≈ $32,145.00</span>
+            `,
+            badgeHTML: `
+                <span class="badge-text" style="background: rgba(255,255,255,0.15);">Staked</span>
+            `,
+            numberHTML: `
+                <span class="card-label">Wallet</span>
+                <span class="card-number">ETH</span>
+            `,
+            logoHTML: `
+                <div class="circle circle-left" style="background: rgba(255,255,255,0.2);"></div>
+                <div class="circle circle-right" style="background: rgba(255,255,255,0.1);"></div>
+            `
+        },
+        {
+            id: 'savings',
+            bg: 'linear-gradient(147.966deg, rgb(255, 87, 87) 0%, rgb(180, 20, 20) 100%)',
+            balanceHTML: `
+                <span class="card-label">High-Yield Savings</span>
+                <span class="card-value">$85,200.00</span>
+                <span class="card-approx">+4.5% APY</span>
+            `,
+            badgeHTML: `
+                <span class="badge-text" style="color: var(--color-red-400); background: var(--color-white)">Locked</span>
+            `,
+            numberHTML: `
+                <span class="card-label">Account ending in</span>
+                <span class="card-number">•••• 9901</span>
+            `,
+            logoHTML: `
+                <div class="circle circle-left" style="background: rgba(255,255,255,0.1);"></div>
+            `
         }
     ];
 
     const pills = document.querySelectorAll('.pill');
     const dots = document.querySelectorAll('.dot');
-    
+
     const mainCard = document.querySelector('.main-card');
     const cardBalanceInfo = document.querySelector('.card-balance-info');
     const cardBadge = document.querySelector('.card-badge');
@@ -64,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // For now, only handle first two indexes
             const cardData = cardsData[index] || cardsData[0]; // fallback to primary if no data
-            
+
             // Update Card Styles and DOM
             mainCard.style.background = cardData.bg;
             cardBalanceInfo.innerHTML = cardData.balanceHTML;

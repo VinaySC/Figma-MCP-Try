@@ -455,7 +455,6 @@ body {
 
 .activity-item:hover {
     background-color: #efefef;
-    transform: translateX(4px);
 }
 
 .activity-left {
